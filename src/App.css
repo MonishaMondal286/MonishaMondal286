@@ -1,0 +1,166 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+
+.content {
+  border: 0px solid red;
+  display: flex;
+  justify-content: center;
+  
+  gap: 20px;
+  padding: 20px;
+}
+
+.menu {
+  flex: 2;
+  margin: auto;
+  border: 0px solid teal;
+}
+
+.cart {
+  flex: 1;
+  max-width: 35%;
+}
+
+.menu h2, .cart h2 {
+  color: #ee6e73;
+  border: 0px solid red;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+}
+
+.menu-item {
+  text-align: center;
+  flex: 1 0 calc(25% - 20px); 
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 200%;
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .item-details {
+    padding: 15px;
+
+    h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    p {
+      margin: 5px 0;
+      color: #777;
+    }
+
+  }
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+
+  p {
+    margin: 0;
+  }
+
+ 
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    .header {
+    width: 100%;
+      /* background-color: #ee6e73; */
+      background-color: #ee6e73;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      border: 0px solid red;
+    }
+
+    .menu-list {
+      /* display: grid; */
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    
+    
+  }
+
+  .menu, .cart {
+    max-width: 100%;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .menu-item {
+    flex: 1 1 50%; /* 2 items in a row */
+    margin-bottom: 20px;
+  }
+}
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+.addToCard{
+  border:0px solid red;
+  background-color: #e57373;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #d64f4f;
+  }
+}
